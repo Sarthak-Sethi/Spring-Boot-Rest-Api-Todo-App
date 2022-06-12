@@ -1,12 +1,22 @@
-package com.sarthak.model;
+package com.sarthak.demo.models;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Todo {
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private String id;
 	    private String title;
 	    private boolean isComplete;
 	    private Date date;
+
+		public Todo() {}
 
 		public Todo(String id, String title, boolean isComplete, Date date) {
 			super();

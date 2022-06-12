@@ -20,5 +20,7 @@ public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerA
 				.and()
 			//.formLogin().and()
 			.httpBasic();
+    http.headers().frameOptions().disable();
+	// add above line to acess h2 in spering security
 	}
 }
